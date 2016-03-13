@@ -1,3 +1,4 @@
 [submodule "lib/qmqtt"]
 	path = lib/qmqtt
 	url = https://github.com/emqtt/qmqtt.git
+	branch = release
