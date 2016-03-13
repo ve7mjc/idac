@@ -4,6 +4,9 @@ QT -= gui
 DEFINES += QMQTT_LIBRARY
 include(../lib/qmqtt/qmqtt.pri)
 
+LIBS += -L/usr/lib/x86_64-linux-gnu/qca-qt5 -lqca-qt5
+INCLUDEPATH += /usr/include/qt5/Qca-qt5/QtCrypto
+
 CONFIG += c++11
 
 TARGET = oacim

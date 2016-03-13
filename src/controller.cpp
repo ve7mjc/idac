@@ -18,6 +18,14 @@ Controller::Controller(QObject *parent) : QObject(parent)
     connect(mqttLocalClient, SIGNAL(received(QMQTT::Message)),
             this, SLOT(onLocalMqttMessageReceived(QMQTT::Message)));
 
+    QCA::Initializer init;
+
+    // We need to ensure that we have certificate handling support
+    if ( !QCA::isSupported( "cert" ) )
+        qDebug() << "NO PKI certificate support";
+    else
+        qDebug() << "PKI certificate supported";
+
 }
 
 int Controller::loadConfig(QString token, QString server)

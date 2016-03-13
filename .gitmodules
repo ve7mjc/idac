@@ -2,3 +2,6 @@
 	path = lib/qmqtt
 	url = https://github.com/emqtt/qmqtt.git
 	branch = release
+[submodule "lib/qca"]
+	path = lib/qca
+	url = git://anongit.kde.org/qca.git

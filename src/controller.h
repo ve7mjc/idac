@@ -23,6 +23,8 @@
 #include "token.h"
 #include "lock.h"
 
+#include <QtCrypto>
+
 class Controller : public QObject
 {
     Q_OBJECT
